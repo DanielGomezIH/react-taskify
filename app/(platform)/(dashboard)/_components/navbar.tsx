@@ -11,8 +11,6 @@ export const Navbar = () => {
   return (
     <nav className='fixed z-50 top-0 px-4 w-full h-14 border-b shadow-sm bg-white flex items-center'>
 
-      {/*TODO: Mobile Sidebar */ }
-
       <MobileSidebar />
 
       <div className='flex items-center gap-x-0 md:gap-x-4'>
@@ -25,7 +23,7 @@ export const Navbar = () => {
           Create
         </Button >
 
-        <Button size='sm' variant='primary' className='rounded-sm block md:hidden'>
+        <Button size='sm' variant='primary' className='rounded-sm p-0 md:hidden h-8 w-8 flex items-center justify-center'>
           <Plus className='h-4 w-4' />
         </Button>
       </div>
@@ -38,11 +36,10 @@ export const Navbar = () => {
           afterLeaveOrganizationUrl='/select-org'
           appearance={ {
             elements: {
-              rootBox: {
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              },
+              rootBox: "flex items-center justify-center h-8",
+              organizationSwitcherTrigger: "h-full py-0",
+              avatarBox: "h-8 w-8",
+              organizationPreviewMainIdentifier: "font-bold"
             }
           } }
         />
@@ -50,10 +47,7 @@ export const Navbar = () => {
           afterSignOutUrl='/'
           appearance={ {
             elements: {
-              avatarBox: {
-                height: 30,
-                width: 30
-              }
+              avatarBox: "w-8 h-8"
             }
           } }
         />

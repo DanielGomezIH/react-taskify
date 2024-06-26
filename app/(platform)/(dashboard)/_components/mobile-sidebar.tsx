@@ -34,7 +34,7 @@ export const MobileSidebar = () => {
         onClick={ onOpen }
         size='sm'
         variant='ghost'
-        className="block md:hidden mr-2">
+        className="block md:hidden mr-2 h-8 w-8">
         <Menu className="h-4 w-4" />
 
         <Sheet open={ isOpen } onOpenChange={ onClose }>

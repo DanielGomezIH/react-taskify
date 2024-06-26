@@ -71,16 +71,25 @@ export const Sidebar = ( { storageKey = 't-sidebar-state' }: SidebarProps ) => {
   if ( !isLoadedOrg || !isLoadedOrgList || userMemberships.isLoading ) {
     return (
       <>
-        <Skeleton />
+        <div className="flex items-center justify-between mb-2 ">
+          <Skeleton className="h-10 w-[50%]" />
+          <Skeleton className="h-10 w-10" />
+        </div>
+
+        <div className="space-y-2">
+          <NavItem.Skeleton />
+          <NavItem.Skeleton />
+          <NavItem.Skeleton />
+        </div>
       </>
     );
   }
 
   return (
     <>
-      <div className='font-medium text-xs flex items-center mb-1'>
+      <div className='font-medium text-base flex items-center  p-1.5 justify-between'>
 
-        <span className='pl-4'>
+        <span className='pl-[34px]'>
           Workspaces
         </span>
 
@@ -89,7 +98,7 @@ export const Sidebar = ( { storageKey = 't-sidebar-state' }: SidebarProps ) => {
           type='button'
           size='icon'
           variant='ghost'
-          className='ml-auto'
+          className='w-8 h-8'
         >
           <Link href='/select-org'>
             <Plus className='h-4 w-4' />
