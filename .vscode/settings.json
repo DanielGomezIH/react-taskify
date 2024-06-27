@@ -1,6 +1,8 @@
 {
   "exportall.config.folderListener": [
     "/components/ui",
-    "/actions"
+    "/actions",
+    "/components/form",
+    "/app/(platform)/(dashboard)/organization/[organizationId]/_components"
   ]
 }

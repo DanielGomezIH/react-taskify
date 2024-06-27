@@ -89,7 +89,7 @@ export const Sidebar = ( { storageKey = 't-sidebar-state' }: SidebarProps ) => {
     <>
       <div className='font-medium text-base flex items-center  p-1.5 justify-between'>
 
-        <span className='pl-[34px]'>
+        <span>
           Workspaces
         </span>
 
