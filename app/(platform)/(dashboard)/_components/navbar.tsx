@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { OrganizationSwitcher, UserButton } from '@clerk/nextjs';
 import { Plus } from 'lucide-react';
 import { MobileSidebar } from './mobile-sidebar';
+import { FormPopover } from '@/components/form';
 
 export const Navbar = () => {
 
@@ -19,13 +20,17 @@ export const Navbar = () => {
           <Logo />
         </div>
 
-        <Button size='sm' variant='primary' className='rounded-sm hidden md:block h-auto py-1.5 px-2'>
-          Create
-        </Button >
+        <FormPopover align='start' side='bottom' sideOffset={ 18 }>
+          <Button size='sm' variant='primary' className='rounded-sm hidden md:block h-auto py-1.5 px-2'>
+            Create
+          </Button >
+        </FormPopover>
 
-        <Button size='sm' variant='primary' className='rounded-sm p-0 md:hidden h-8 w-8 flex items-center justify-center'>
-          <Plus className='h-4 w-4' />
-        </Button>
+        <FormPopover align='start' side='bottom' sideOffset={ 18 }>
+          <Button size='sm' variant='primary' className='rounded-sm p-0 md:hidden h-8 w-8 flex items-center justify-center'>
+            <Plus className='h-4 w-4' />
+          </Button>
+        </FormPopover>
       </div>
 
       <div className='ml-auto flex items-center gap-x-2'>
