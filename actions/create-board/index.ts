@@ -31,7 +31,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
     !imageUserName
   )
     return {
-      error: 'Missing fields. Failed to create board.',
+      error: 'Missing fields. Failed to create board',
     };
 
   let board;
@@ -49,7 +49,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
       },
     });
   } catch (error) {
-    return { error: 'Failed to create board.' };
+    return { error: 'Failed to create board' };
   }
 
   revalidatePath(`/board/${board.id}`);
